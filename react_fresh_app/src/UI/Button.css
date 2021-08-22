@@ -1,0 +1,11 @@
+.btn-login {
+    width: 33%;
+    height : 30px;
+    margin: 0 auto;
+    background-color : forestgreen;
+    color : white;
+    border-radius : 5px;
+    border : none;
+    margin-top: 0.3em;
+    margin-right: 0.4em;
+}

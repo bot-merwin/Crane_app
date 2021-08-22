@@ -1,0 +1,17 @@
+.list-header{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.list-header h3{
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+.product-card-container{
+    margin-top: 2em;
+    margin-left: 6%;
+    display: grid; 
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    row-gap: 2em;    
+}
