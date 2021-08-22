@@ -32,7 +32,8 @@ const LoginPage = () =>{
                     localStorage.setItem("token",res.data.token);
                 }
                 else{
-                    console.log("Invalid username/password");  
+                    console.log("Invalid username/password"); 
+                    console.log("recheck your credentials");
                 }
             })
             .catch(() => console.log("authentication failed"));
