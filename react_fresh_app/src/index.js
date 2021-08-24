@@ -6,14 +6,18 @@ import LoginPage from "./Component/LoginPage";
 import reportWebVitals from './reportWebVitals';
 import Navbar from "./UI/Navbar";
 import Home from './Component/Home';
-import AuthContext from './Store/auth-context';
+import {BrowserRouter} from 'react-router-dom';
+
+import AuthContext, { AuthContextProvider } from './Store/auth-context';
 
 ReactDOM.render(
-  <AuthContext>
-    <React.StrictMode>
-      <App></App>
-    </React.StrictMode>
-  </AuthContext>,
+  <AuthContextProvider>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App></App>
+      </React.StrictMode>
+    </BrowserRouter>
+  </AuthContextProvider>,
   document.getElementById('root')
 );
 

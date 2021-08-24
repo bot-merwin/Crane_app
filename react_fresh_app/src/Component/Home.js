@@ -2,8 +2,13 @@ import React from "react";
 import Navbar from "../UI/Navbar";
 import classes from "./Home.module.css";
 import Card from "../UI/Card";
+import { useContext } from "react";
+import AuthContext from "../Store/auth-context";
 
 const Home = () => {
+
+    const authCtx = useContext(AuthContext);
+
     return(
         <React.Fragment>
             <Navbar btnText="Logout" className="btn-login"/>

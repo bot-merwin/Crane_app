@@ -2,6 +2,8 @@ import React, {useState, useContext} from "react";
 import Card from "../UI/Card";
 import classes from "./Login.module.css";
 import Navbar from "../UI/Navbar";
+import AuthContext from "../Store/auth-context";
+import { useHistory } from "react-router";
 const axios = require('axios').default;
 
 
@@ -9,6 +11,7 @@ const LoginPage = () =>{
     
     const [enteredUsername, setEnteredUsername] = useState('');
     const [enteredPassword, setEnteredPassword] = useState('');
+    const history = useHistory();
     const authCtx = useContext(AuthContext);
 
     const req_handler = (e) => {
@@ -27,9 +30,7 @@ const LoginPage = () =>{
                 if(res.data.token!= null){
                     console.log(res.data.token);
                     authCtx.login(res.data.token);
-                    setToken(res.data.token);
-                    localStorage.clear();
-                    localStorage.setItem("token",res.data.token);
+                    history.push('/home');
                 }
                 else{
                     console.log("Invalid username/password"); 
