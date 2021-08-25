@@ -59,7 +59,7 @@ const passwordHandler = (e) =>{
                 <form onSubmit={req_handler} className= {classes['form_test']}>
                     <div className={classes.input_container}>
                         <input className={classes.username} placeholder="Username" name="usr" onChange={usernameHandler}></input>
-                        <input className={classes.password} placeholder="password" name="pwd" onChange={passwordHandler}></input>
+                        <input type="password" autocomplete="off" className={classes.password} placeholder="password" name="pwd" onChange={passwordHandler}></input>
                     </div>  
                     <button className={classes['btn-login']}>Sign In</button>
                 </form>
