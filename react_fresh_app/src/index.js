@@ -7,16 +7,18 @@ import reportWebVitals from './reportWebVitals';
 import Navbar from "./UI/Navbar";
 import Home from './Component/Home';
 import {BrowserRouter} from 'react-router-dom';
-
+import {CraneInfoContextProvider} from './Store/craneinfo-context';
 import AuthContext, { AuthContextProvider } from './Store/auth-context';
 
 ReactDOM.render(
   <AuthContextProvider>
-    <BrowserRouter>
-      <React.StrictMode>
-        <App></App>
-      </React.StrictMode>
-    </BrowserRouter>
+      <CraneInfoContextProvider>
+      <BrowserRouter>
+        <React.StrictMode>
+          <App></App>
+        </React.StrictMode>
+      </BrowserRouter>
+    </CraneInfoContextProvider>
   </AuthContextProvider>,
   document.getElementById('root')
 );
